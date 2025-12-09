@@ -1,0 +1,51 @@
+# Folder Consolidation Configuration
+# ===================================
+# This file helps you set up the consolidation easily
+
+# DESTINATION (Master Folder)
+# Where all your files will be consolidated to
+MASTER_FOLDER = "C:\Users\YourUsername\Consolidated_Files"
+
+# SOURCE FOLDERS
+# List all the folders you want to consolidate
+# Example: Old AppData, Downloads, Documents from different years, external drives, etc.
+
+SOURCE_FOLDERS = [
+    # Windows AppData locations (old versions)
+    "C:\Users\YourUsername\AppData\Local",
+    "C:\Users\YourUsername\AppData\Roaming",
+
+    # Old Documents and Downloads
+    "C:\Users\YourUsername\Documents",
+    "C:\Users\YourUsername\Downloads",
+
+    # Old backup folders
+    "D:\Backups\2020",
+    "D:\Backups\2021",
+    "E:\Archive\Documents",
+
+    # Add your own paths here...
+    # "X:\path\to\folder",
+]
+
+# LOG FILE
+# Where to save the consolidation log
+LOG_FILE = "consolidation_log.txt"
+
+# ===================================
+# USAGE INSTRUCTIONS
+# ===================================
+#
+# 1. Update MASTER_FOLDER with your destination path
+# 2. Add all source folders to SOURCE_FOLDERS list
+# 3. Run the automated script (see below)
+#
+# What happens:
+# - All folders from sources will be copied to MASTER_FOLDER
+# - If a folder name already exists, it gets renamed (name_2, name_3, etc.)
+# - Duplicate files are compared by content (MD5 hash)
+#   - Identical files: skipped (no wasted space)
+#   - Different files: renamed (_2, _3, etc.)
+# - Everything is logged for your reference
+#
+# ===================================

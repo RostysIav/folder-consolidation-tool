@@ -1,0 +1,24 @@
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment and dependencies
+.env
+virtualenv/
+env/
+venv/
+
+# Log files
+*.log
+
+# User-specific files
+*.DS_Store
+thumbs.db
+
+# Ignore the master folder you create
+# Change 'Consolidated_Files' if you named it something else
+Consolidated_Files/
+
